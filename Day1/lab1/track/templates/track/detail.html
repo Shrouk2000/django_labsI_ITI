@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Track Detail</title></head>
+<body>
+    <h2>{{ track.title }}</h2>
+    <p>Duration: {{ track.duration }}</p>
+    <p>Artist: {{ track.artist }}</p>
+    <a href="{% url 'update_track' track.id %}">Edit</a>
+    <a href="{% url 'delete_track' track.id %}">Delete</a>
+    <a href="{% url 'index' %}">Back to list</a>
+</body>
+</html>

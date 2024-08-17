@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head><title>Update Track</title></head>
+<body>
+    <h2>Update Track</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'index' %}">Back to list</a>
+</body>
+</html>

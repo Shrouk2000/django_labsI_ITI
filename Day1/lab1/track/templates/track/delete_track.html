@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head><title>Delete Track</title></head>
+<body>
+    <h2>Are you sure you want to delete {{ track.title }}?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    <a href="{% url 'index' %}">Back to list</a>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Trainees</title></head>
+<body>
+    <h2>Trainees List</h2>
+    <ul>
+        {% for trainee in trainees %}
+            <li>
+                <a href="{% url 'detail' trainee.id %}">{{ trainee.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_trainee' %}">Add New Trainee</a>
+</body>
+</html>
